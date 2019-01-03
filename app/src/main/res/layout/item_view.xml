@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="item"
+                  type="com.duongtung.newsapp.data.data24h.ItemNew"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:id="@+id/imageNews"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                app:setImage="@{item.description}"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"/>
+        <TextView
+                android:layout_margin="@dimen/margin_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_title"
+                app:textNews="@{item.description}"/>
+    </LinearLayout>
+</layout>

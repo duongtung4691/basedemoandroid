@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="data" type="com.duongtung.newsapp.data.actionbar.ActionBar"/>
+    </data>
+        <android.support.constraint.ConstraintLayout
+                android:background="@{data.backgroundActionBar}"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize">
+            <ImageView
+                    android:id="@+id/leftImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageResource="@{data.leftButtonImage}"
+                    android:layout_marginLeft="@dimen/margin_horizontal"
+                    android:layout_marginStart="@dimen/margin_horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@{data.title}"
+                    android:layout_marginLeft="@dimen/margin_horizontal"
+                    android:layout_marginStart="@dimen/margin_horizontal"
+                    android:textColor="@color/grey_69"
+                    android:textSize="@dimen/text_size_title"
+                    app:layout_constraintStart_toEndOf="@+id/leftImageButton"/>
+
+            <TextView
+                    android:id="@+id/weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/grey_69"
+                    android:layout_marginRight="@dimen/margin_horizontal"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:textSize="@dimen/text_size_title"
+                    app:layout_constraintEnd_toStartOf="@+id/rightImageButton"/>
+
+            <ImageView
+                    android:id="@+id/rightImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageResource="@{data.rightButtonImage}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginRight="@dimen/margin_horizontal"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+            />
+        </android.support.constraint.ConstraintLayout>
+</layout>
