@@ -27,7 +27,7 @@ android {
     androidExtensions {
         experimental = true
     }
-    dataBinding{
+    dataBinding {
         enabled = true
     }
 }
